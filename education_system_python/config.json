@@ -1,0 +1,6 @@
+{
+    "days": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+    "subjects": ["Mathematics of Computing", "Computer Architecture", "Operating System", "Programming with Python", "Database Management", "Co-Curriculum", "Information System Cloud Computing"],
+    "timeslots": ["08:00","09:00", "10:00", "11:00", "12:00", "13:00", "14:00", "15:00", "16:00", "17:00", "18:00"],
+    "classroom": ["Lab 1","Lab 2","Lab 3","Lab 4","Lab 5","Lab 6","Lab 7","Lab 8","Lab 9","Lab 10"]
+}
