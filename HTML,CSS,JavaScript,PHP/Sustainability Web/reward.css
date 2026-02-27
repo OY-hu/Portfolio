@@ -1,0 +1,237 @@
+/*
+This file contains the CSS used by the files in the reward folder.
+The styling focuses on the layout.
+*/
+
+.item {
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+}
+
+h4, p {
+    margin: 0;
+}
+
+.details h4 {
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+
+.item .imageArea {
+    border-radius: 10px 10px 0 0;
+}
+
+.points {
+    display: flex;
+    gap: 5px;
+}
+
+.points img {
+    width: 22px;
+    height: 22px;
+}
+
+#tint {
+    position: fixed;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(141, 141, 141, 0.43);
+}
+
+.imageArea {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#rewardDetail .details {
+    display:flex;
+    flex-direction: column;
+    margin: 1%;
+    gap: 2%;
+}
+
+.deleteIcon {
+    background: url('../../css/icon/delete.png') no-repeat;
+}
+
+.request {
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px #BFBFBF;
+    margin: 10px 0 10px 0;
+    padding: 10px;
+    align-items: center;
+}
+
+.request .status, .request .completedStatus {
+    text-align: right;
+}
+
+.request select:disabled {
+    color: inherit;
+    background-color: inherit;
+    opacity: 1;
+    cursor: default;
+}
+
+@media only screen and (min-width: 700px) {
+    #wrapper {
+        display: grid;
+        grid-column: 3 / 19;
+        grid-template-columns: repeat(16, 1fr);
+    }
+
+    h1 {
+        grid-column: 1 / 17;
+    }
+
+    .tab {
+        grid-column: 1 / 7;
+        height: 45px;
+    }
+
+    .create {
+        grid-column: 7 / 8;
+    }
+
+    .create input[type=submit] {
+        width: 60%;
+    }
+
+    .search {
+        grid-column: 11 / 17;
+    }
+
+    #reward { 
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        height: 420px;
+        overflow-y: scroll;
+        grid-column: 1 / 17;
+    }
+
+    #redeem {
+        grid-column: 1 / 17;
+    }
+
+    .item {
+        width: 23%;
+        height: 400px;
+        margin: 1%;
+    }
+
+    .item .imageArea {
+        height: 250px;
+        width: 100%;
+    }
+
+    .item img {
+        max-width: 100%;
+        max-height: 250px;
+    }
+
+    .item .details {
+        width: 90%;
+    }
+
+    #rewardDetail {
+        display: flex;
+        width: 90%;
+    }
+
+    #rewardDetail .imageArea {
+        width: 50%;
+        height: 500px;
+    }
+
+    #rewardDetail img {
+        max-width: 100%;
+        max-height: 500px;
+    }
+
+    .request .details {
+        width: 88%;
+    }
+
+    .request .status, .request .completedStatus {
+        width: 10%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    body {
+        grid-template-columns: 1fr;
+    }
+
+    #wrapper {
+        margin: 0 5%;
+    }
+
+    .create input[type=submit] {
+        width: 50px;
+        margin: 5px 0 0 ;
+    }
+
+    #reward { 
+        display: flex;
+        flex-direction: column;
+    }
+
+    .item {
+        width: 100%;
+        height: 400px;
+        margin: 2% 0 2% 0;
+    }
+
+    .item .imageArea {
+        height: 250px;
+        width: 100%;
+    }
+
+    .item img {
+        max-width: 100%;
+        max-height: 250px;
+    }
+
+    .item .details {
+        width: 90%;
+    }
+
+    #rewardDetail {
+        display: flex;
+        width: 90%;
+        height: 500px;
+    }
+
+    #rewardDetail .imageArea {
+        width: 100%;
+        height: 250px;
+    }
+
+    #rewardDetail img {
+        max-width: 100%;
+        max-height: 250px;
+    }
+
+    #rewardDetail {
+        flex-direction: column;
+    }
+
+    .request {
+        flex-direction: column;
+    }
+
+    .request .details {
+        width: 100%;
+    }
+}

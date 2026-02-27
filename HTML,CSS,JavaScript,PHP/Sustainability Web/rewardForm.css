@@ -1,0 +1,85 @@
+/*
+This file contains the CSS used by rewardForm.php file only.
+The styling focuses on the layout.
+*/
+
+#wrapper {
+    background-color: #F3F3F3;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#wrapper input[type=file] {
+    display: none;
+}
+
+#buttons {
+    display: flex;
+    justify-content: right;
+    gap: 10px;
+}
+
+#buttons input {
+    padding: 0 3%;
+    color: white;
+}
+
+#imageInput {
+    display: none;
+}
+
+#imageUpload {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media only screen and (min-width: 700px) {
+    h1 {
+        grid-column: 4 / 18;
+    }
+
+    #wrapper {
+        display: grid;
+        grid-column: 4 / 18;
+        grid-template-columns: repeat(14, 1fr);
+    }
+
+    #imageUpload {
+        grid-column: 2 / 6;
+        grid-row: span 4;
+    }
+
+    #imageUpload img {
+        max-width: 100%;
+        max-height: 375px;
+    }
+
+    .text, .price {
+        grid-column: 7 / 14;
+    }
+
+    #buttons {
+        grid-column: 2 / 14;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    body {
+        grid-template-columns: 1fr;
+        margin: 0 5%;
+    }
+
+    #imageUpload {
+        margin-bottom: 10px;
+        height: 300px;
+    }
+
+    #imageUpload img {
+        max-width: 100%;
+        max-height: 300px;
+    }
+}
