@@ -1,0 +1,30 @@
+/*
+This file contains the CSS used by files under the profile section.
+The styling in this file is focused on the form pages in profile section.
+*/
+
+.email input {
+    background: url('icon/email.png') no-repeat;
+    background-size: 20px 20px;
+    background-position: 5px center;
+    background-color: white;
+}
+
+.course input {
+    background: url('icon/course.png') no-repeat;
+    background-size: 20px 20px;
+    background-position: 5px center;
+    background-color: white;
+}
+
+.phone input {
+    background: url('icon/phone.png') no-repeat;
+    background-size: 20px 20px;
+    background-position: 5px center;
+    background-color: white;
+}
+
+input[type=submit], input[type=button], button {
+    background-color: #00308F;
+    color: white;
+}

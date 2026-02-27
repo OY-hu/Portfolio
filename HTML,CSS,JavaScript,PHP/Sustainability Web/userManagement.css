@@ -1,0 +1,146 @@
+/*
+This file contains the CSS used by the userManagement.php file only.
+The styling focuses on the layout.
+*/
+
+#content {
+    width: 100%;
+}
+
+.data .editButton {
+    background: url('../css/icon/edit.png') no-repeat;
+}
+
+.data .deleteButton {
+    background: url('../css/icon/delete.png') no-repeat;
+}
+
+.data .editButton, .data .deleteButton {
+    background-size: 22px 22px;
+    background-color: transparent;
+    background-position: center;
+    width: 22px;
+    height: 22px;
+}
+
+.data {
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px #BFBFBF;
+    margin: 3px 0 15px 0;
+    align-items: center;
+}
+
+#confirmDelete {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(141, 141, 141, 0.43)
+}
+
+#confirmDelete.open {
+    display: block;
+}
+
+#cancelButton {
+    background-color: black;
+}
+
+#confirmButton {
+    background-color: #E34444;
+}
+
+@media only screen and (min-width:500px) {
+    #wrapper {
+        display: grid;
+        grid-column: 3 / 19;
+        grid-template-columns: repeat(16, 1fr);
+        margin-bottom: 10px;
+    }
+
+    h1 {
+        grid-column: 1 / 17;
+    }
+
+    .tab {
+        grid-column: 1 / 7;
+    }
+
+    .data p {
+        width: 93%;
+        box-sizing: border-box;
+        padding: 0 10px 0 10px;
+    }
+
+    #admin, #vendor, #student {
+        width: 100%;
+        text-align: center;
+    }
+
+    .create {
+        grid-column: 7 / 8;
+    }
+
+    .create input[type=submit] {
+        width:60%;
+        margin: 0 0 0 5px;
+    }
+
+    .search {
+        grid-column: 11 / 17;
+    }
+
+    #content {
+        grid-column: 1 / 17;
+        overflow: auto;
+        height: 70vh;
+    }
+
+    #confirmDelete form {
+        background-color: #F4F4F4;
+        margin: 10% 40% 0 40%;
+        box-sizing: border-box;
+        border-radius: 20px;
+        padding: 10px;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width:500px) {
+    body {
+        margin: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    
+    #wrapper {
+        margin: 0 10px 0 10px;
+    }
+
+    #admin, #vendor, #student {
+        width: 100%;
+    }
+
+    .data p {
+        width: 85%;
+        box-sizing: border-box;
+        padding: 0 5% 0 10px;
+    }
+
+    .create input[type=submit] {
+        width: 30px;
+        margin: 5px 0 0 0;
+        text-align: center;
+    }
+
+    #confirmDelete form {
+        background-color: #F4F4F4;
+        margin: 10% 10% 0 10%;
+        box-sizing: border-box;
+        border-radius: 20px;
+        padding: 10px;
+        text-align: center;
+    }
+}
