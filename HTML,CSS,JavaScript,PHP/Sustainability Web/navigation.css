@@ -1,0 +1,139 @@
+/*
+This file contains the CSS used by the navigation.php file only.
+The styling in this file is focused on the navigation panel.
+*/
+
+#userPoints {
+    display: flex;
+    align-items: center;
+    padding-right: 10px;
+}
+
+#points {
+    padding-left: 5px;
+    padding-right: 5px;
+    font-weight: bold;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+/* Desktop View */
+@media only screen and (min-width:1000px) {
+    #menuButton {
+        display: none;
+    }
+
+    #menu {
+        display: flex;
+        align-items: center;
+        grid-column: 2 / 20;
+    }
+
+    #menu #navigation {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-grow: 1;
+        background-color: #8CDF87;
+        border-radius: 90px;
+        height: 45px;
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    #menu #navigation ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        align-items: center;
+    }
+
+    #menu #navigation ul li {
+        text-align: center;
+        font-weight: bold;
+        flex: 1;
+    }
+
+    #menu #userNav {
+        display: flex;
+        height: 35px;
+        align-items: center;
+    }
+
+    #userNav ul {
+        display: flex;
+        list-style: none;
+        gap: 10px;
+    }
+}
+
+/* Tablet and mobile view. */
+@media screen and (max-width:1000px) {
+    #menuButton {
+        margin-top: 10px;
+        position: fixed;
+        left: 0;
+        background-color:transparent;
+        border: none;
+        font-size: 24px;
+        width: 200px;
+        text-align: left;
+        z-index: 999;
+        color: black;
+    }
+    
+    #menu {
+        display: block;
+        position: fixed;
+        z-index: 998;
+        text-align: center;
+        top: 0;
+        left: 0;;
+        width: 200px;
+        height: 100vh;
+        background-color: #D9D9D9;
+        transform: translateX(-200%);
+        transition: transform 0.5s ease;
+    }
+
+    #menu.open {
+        transform: translateX(0);
+        transition: transform 0.5s ease;
+    }
+
+    #menu #logo {
+        padding-top: 50px;
+    }
+
+    #navigation ul {
+        padding: 0;
+        list-style: none;
+        margin: 0;
+    }
+
+    #navigation ul li {
+        margin: 30px 0 30px 0;
+        font-weight: bold;
+    }
+
+    #userPoints {
+        margin: 10px;
+    }
+
+    #userNav {
+        margin: 10px;
+    }
+
+    #userNav ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        gap: 10px;
+    }
+}

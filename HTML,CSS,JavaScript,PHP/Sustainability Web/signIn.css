@@ -1,0 +1,104 @@
+/*
+This file contains the CSS used by signIn.php file only.
+The styling in this file is focused on the sign in page.
+*/
+
+input[type=submit] {
+    width: 100%;
+    background-color: #00308F;
+    height: 30px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 10px 0px 5px 0px;
+}
+
+#remember {
+    display: flex;
+    align-items: center;
+    font-size: 10px;
+}
+
+#rightSection form p {
+    font-size: 10px;
+    font-weight: bold;
+}
+
+a {
+    color: #238ED0;
+    text-decoration: none;
+}
+
+/* Desktop view. */
+@media only screen and (min-width:700px) {
+    body {
+        align-items: center;
+    }
+
+    #wrapper {
+        margin: 5%;
+        height: 75vh;
+        display: grid;
+        align-items: center;
+        grid-column: 3 / 19;
+        grid-template-columns: repeat(16, 1fr);
+    }
+
+    #wrapper #leftSection {
+        display: block;
+        align-items: center;
+        height: 75vh;
+        grid-column: 1 / 9;
+        background: linear-gradient(to bottom, #6FFF67, #6CEC83, #66D2AB, #5DA7EC);
+        border-top-left-radius: 32px;
+        border-bottom-left-radius: 32px;
+    }
+
+    #leftSection #logo {
+        margin: 5% 5% 0 5%;
+    }
+
+    #leftSection h1, #leftSection p {
+        margin: 5%;
+    }
+
+    #rightSection {
+        display: grid;
+        align-items: center;
+        justify-items: center;
+        height: 75vh;
+        grid-column: 9 / 17;
+        background-color: #F9F9F9;
+        border-top-right-radius: 32px;
+        border-bottom-right-radius: 32px;
+    }
+
+    #wrapper #rightSection h1 {
+        text-align: center;
+        font-size: 25px;
+        margin-bottom: 5%;;
+    }
+
+    form {
+        width: 75%;
+    }
+}
+
+/* Mobile view */
+@media only screen and (max-width: 700px) {
+    body {
+        margin: 0%;
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+
+    #leftSection {
+        background: linear-gradient(to bottom, #6FFF67, #6CEC83, #66D2AB, #5DA7EC);
+        padding: 10px;
+    }
+
+    #rightSection {
+       background-color: #F9F9F9;
+       padding: 10px;
+    }
+}
