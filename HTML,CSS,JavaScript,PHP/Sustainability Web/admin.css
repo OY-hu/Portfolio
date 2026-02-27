@@ -1,0 +1,20 @@
+/*
+This file contains the layout and element styling for admin home page.
+*/
+
+.adminList {
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px #BFBFBF;
+    margin: 3px 0 15px 0;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+@media only screen and (min-width: 700px) {
+    #wrapper {
+        grid-column: 7 / 14;
+    }
+}

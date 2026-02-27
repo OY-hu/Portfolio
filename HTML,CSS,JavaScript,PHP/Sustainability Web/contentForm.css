@@ -1,0 +1,83 @@
+/*
+This file contains the CSS used by the contentForm.css file only.
+The styling focuses on the layout.
+*/
+
+#wrapper {
+    background-color: #F3F3F3;
+    padding: 20px 10px;
+    border-radius: 10px;
+}
+
+input[type=file] {
+    display: none;
+}
+
+#buttons input {
+    color: white;
+    padding: 0 20px 0 20px;
+}
+
+#buttons input[type=button] {
+    background-color: #E34444;
+}
+
+#buttons input[type=submit] {
+    background-color: black;
+}
+
+@media only screen and (min-width: 700px) {
+    h1 {
+        grid-column: 4 / 18;
+    }
+
+    #wrapper {
+        grid-column: 4 / 18;
+        display: grid;
+        grid-template-columns: repeat(14, 1fr);
+    }
+
+    #image {
+        grid-row: span 3;
+        grid-column: 2 / 7;
+        width: 300px;
+        height: 300px;
+        background-color: white;
+        text-align: center;
+    }
+
+    #image #preview {
+        width: auto;
+        height: auto;
+        max-width: 300px;
+        max-height: 300px;
+        scale: 1 / 1;
+        object-fit:contain;
+        object-position: center;
+    }
+
+    .text {
+        grid-column: 7 /  14;
+    }
+
+    .text textarea {
+        height: 200px;
+    }
+
+    #buttons {
+        grid-column: 2 / 14;
+        display: flex;
+        justify-content: right;
+        gap: 5px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    body {
+        grid-template-columns: 1fr;
+    }
+
+    h1, #wrapper {
+        margin: 0 5% 0 5%;
+    }
+}

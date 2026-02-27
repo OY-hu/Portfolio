@@ -1,0 +1,28 @@
+/*
+This file contains the CSS used by landing pages.
+The styling focuses on the style of the elements.
+*/
+
+.hat {
+    width: 100%;
+    height: 15px;
+    border-radius: 10px 10px 0 0;
+}
+
+.option {
+    height: fit-content;
+    box-sizing: border-box;
+    text-align: center;
+    padding: 20px 0 20px 0 ;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.option img {
+    width: 40%;
+    height: auto;
+}
+
+p {
+    margin: 5px 0 0 0 ;
+}

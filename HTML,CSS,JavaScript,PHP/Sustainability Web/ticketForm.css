@@ -1,0 +1,56 @@
+/*
+This file contains the styling used by ticketForm.php file only.
+The styling focuses on the layout.
+*/
+
+input[type=button], input[type=submit] {
+    padding: 0 3%;
+    color: white;
+}
+
+input[type=button] {
+    background-color: #E34444;
+}
+
+input[type=submit] {
+    background-color: #00308F;
+}
+
+#wrapper {
+    background-color: #F3F3F3;
+    border-radius: 10px;
+}
+
+#buttons {
+    display: flex;
+    width: 100%;
+    justify-content: right;
+    gap: 10px;
+}
+
+.text textarea {
+    height: 200px;
+}
+
+@media only screen and (min-width: 700px) {
+    h1 {
+        grid-column: 4 / 18;
+    }
+
+    #wrapper {
+        grid-column: 4 / 18;
+        padding: 5%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    body {
+        grid-template-columns: 1fr;
+        margin: 0 5%;
+    }
+
+    #wrapper {
+        padding: 2%;
+        border-radius: 10px;
+    }
+}

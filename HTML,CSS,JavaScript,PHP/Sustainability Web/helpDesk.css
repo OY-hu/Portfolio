@@ -1,0 +1,68 @@
+/*
+This file contains the CSS styling used by helpDesk.php file only.
+The styling focuses on the layout.
+*/
+
+.ticket {
+    display: flex;
+    background-color: white;
+    box-sizing: border-box;
+    padding: 10px 1%;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px #BFBFBF;
+    margin-top: 10px;
+}
+
+.ticketText {
+    width: 95%;
+}
+
+.ticketText p {
+    margin: 0;
+}
+
+.ticket input[type=submit] {
+    background: url('../css/icon/delete.png') no-repeat;
+    width: 5%;
+}
+
+.status {
+    display: flex;
+    width: 10%;
+    align-items: center;
+}
+
+@media only screen and (min-width: 700px) {
+    #wrapper {
+        display: grid;
+        grid-column: 3 / 19;
+        grid-template-columns: repeat(16, 1fr);
+    }
+
+    h1 {
+        grid-column: 3 / 19;
+    }
+
+    .tab {
+        grid-column: 1 / 5;
+    }
+
+    .create {
+        grid-column: 5 / 6;
+    }
+
+    .create input {
+        width: 60%;
+    }
+
+    #ticketArea {
+        grid-column: 1 / 17;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    body {
+        grid-template-columns: 1fr;
+        margin: 0 5%;
+    }
+}

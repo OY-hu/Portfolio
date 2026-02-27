@@ -1,0 +1,49 @@
+/* 
+This file contains the CSS related to the general layout structure of the website.
+The website will be using 20 column structure to allow for it to be responsive without messing up the design.
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Itim&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+body {
+    display: grid;
+    font-family: 'Inter';
+    grid-template-columns: repeat(20, 1fr);
+    background-color: #EFEFEF;
+    margin: 0;
+}
+
+.tab {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.option {
+    width: 100%;
+    padding: 5px 0 5px 0;
+    box-sizing: border-box;
+    text-align: center;
+    border-radius: 5px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.search form {
+    display: flex;
+    align-items: center;
+}
+
+.search input[type=text] {
+    padding: 5px;
+    margin: 0;
+}
+
+.search input[type=submit] {
+    background-color: #0A89F2;
+    color: black;
+    font-weight: bold;
+    margin-left: 5px;
+    padding: 0 3% 0 3%;
+}

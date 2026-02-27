@@ -1,0 +1,114 @@
+/*
+This file contains CSS for studentLanding.php file only.
+The styling focuses on layout and element details.
+*/
+
+#total {
+    display: flex;
+    background-color: #D7F6D5;
+    border-radius: 10px;
+    text-align: center;
+    gap: 10px;
+    height: 150px;
+    padding: 20px;
+}
+
+#activity a {
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: bold;
+    color: #1145AD;
+    text-align: right;
+}
+
+#week {
+    background-color: #F3F3F3;
+    border-radius: 10px;
+    height: 150px;
+    padding: 20px;
+}
+
+#days {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 5% 0;
+    text-align: center;
+}
+
+@media only screen and (min-width: 900px) {
+    #wrapper {
+        display: grid;
+        grid-column: 4 / 18;
+        grid-template-columns: repeat(14, 1fr);
+    }
+
+    h1 {
+        grid-column: 1 / 15;
+    }
+
+    #studentPoints {
+        grid-column: 1 / 7;
+        margin-bottom: 15px;
+    }
+
+    #questOption {
+        grid-column: 1 / 5;
+    }
+
+    #rewardOption {
+        grid-column: 6 / 10;
+    }
+
+    #leaderboardOption {
+        grid-column: 11 / 16;
+    }
+
+    #activity {
+        display: grid;
+        grid-template-columns: repeat(7, 1fr);
+        grid-column: 8 / 15;
+    }
+
+    #activity label {
+        grid-column: 1 / 4;
+        height: min-content;
+    }
+
+    #activity a {
+        grid-column: 6 / 8;
+        height: min-content;
+    }
+
+    #activity #week {
+        grid-column: 1 / 8;
+        margin-bottom: 15px;
+    }
+
+    #days img {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    body {
+        grid-template-columns: 1fr;
+        margin: 0 5%;
+    }
+
+    #wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #wrapper img {
+        max-width: 30%;
+        width: auto;
+        height: auto;
+    }
+
+    #days img {
+        max-width: 100%;
+    }
+}

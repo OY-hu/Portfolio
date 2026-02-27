@@ -1,0 +1,54 @@
+/*
+This file contains the styling used by vendorLanding.php file only.
+This styling focuses on the layout.
+*/
+
+#questOption, #rewardOption, #communityOption {
+    cursor: pointer;
+}
+
+@media only screen and (min-width:700px) {
+    #wrapper {
+        display: grid;
+        justify-content: center;
+        grid-column: 7 / 15;
+        grid-template-columns: repeat(9, 1fr);
+    }
+
+    h1 {
+        grid-column: 1 / 16;
+        text-align: center;
+    }
+
+    #questOption {
+        grid-column: 1 / 5;
+    }
+
+    #rewardOption {
+        grid-column: 6 / 10;
+    }
+
+    #communityOption {
+        grid-column: 1 / 5;
+        margin-top: 10px;
+    }
+
+    #marketplaceOption {
+        grid-column: 6 / 10;
+        margin-top: 10px;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    body {
+        grid-template-columns: 1fr;
+    }
+
+    #wrapper {
+        margin: 0 5% 0 5%;
+    }
+
+    #questOption, #rewardOption, #communityOption, #marketplaceOption {
+        margin-top: 10px;
+    }
+}
