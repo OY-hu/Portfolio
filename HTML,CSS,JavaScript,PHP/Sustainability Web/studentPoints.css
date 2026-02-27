@@ -1,0 +1,132 @@
+/*
+This file contains the CSS styling used by the files that focuses on student points.
+The file focuses on the layout and element details.
+*/
+
+.student, .activity, .studentActivity {
+    width: 100%;
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 4px #BFBFBF;
+    padding: 10px;
+    align-items: center;
+    box-sizing: border-box;
+    margin: 10px 0;
+}
+
+.student p, .student input, .activity p, .activity input, .studentActivity p {
+    margin: 0;
+}
+
+.editButton, .flag {
+    background: url('../../css/icon/edit.png') no-repeat;
+    background-position: center;
+}
+
+#buttons {
+    display: flex;
+    gap: 5px;
+    justify-content: right;
+}
+
+#buttons input {
+    width: 25%;
+    color: white;
+}
+
+#editStudent {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(141, 141, 141, 0.43);
+}
+
+#visibleArea {
+    background-color: #F3F3F3;
+    margin: 10% 30%;
+    padding: 20px;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+@media only screen and (min-width: 700px) {
+    #wrapper {
+        grid-column: 3 / 19;
+        display: grid;
+        grid-template-columns: repeat(16, 1fr);
+    }
+
+    h1 {
+        grid-column: 1 / 17;
+    }
+
+    .tab {
+        grid-column: 1 / 7;
+    }
+
+    .search {
+        grid-column: 11 / 17;
+    }
+
+    select {
+        grid-column: 15 / 17;
+    }
+
+    #content {
+        grid-column: 1 / 17;
+        height: 490px;
+        overflow-y: scroll;
+    }
+
+    .studentDetail, .activityDetail {
+        width: 70%;
+    }
+
+    .studentPoints, .activityPoints {
+        width: 25%;
+    }
+
+    .studentActivityDetail {
+        width: 85%;
+    }
+
+    .studentActivityPoints {
+        width: 15%;
+    }
+
+    .editButton, .flag {
+        width: 5%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    body {
+        grid-template-columns: 1fr;
+    }
+
+    #wrapper {
+        margin: 0 5%;
+    }
+
+    .studentDetail, .activityDetail {
+        width: 67%;
+    }
+
+    .studentPoints, .activityPoints {
+        width: 25%;
+    }
+
+    .studentActivityDetail {
+        width: 70%;
+    }
+
+    .studentActivityPoints {
+        width: 30%;
+    }
+
+    .editButton, .flag {
+        width: 8%;
+    }
+}
