@@ -1,0 +1,238 @@
+/*
+This file contains the CSS used by the community.php file only.
+The styling focuses on the layout.
+*/
+
+.buttons {
+    display: flex;
+    width: 100%;
+    justify-content: right;
+    gap: 5px;
+}
+
+.buttons input {
+    color: white;
+    width: 20%;
+}
+
+.buttons input[type=submit] {
+    background-color: black;
+}
+
+.buttons input[type=button] {
+    background-color: #E34444;
+}
+
+#confirmDelete {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(141, 141, 141, 0.43)
+}
+
+#confirmDelete.open {
+    display: block;
+}
+
+#cancelButton {
+    background-color: black;
+    color: white;
+}
+
+#confirmButton {
+    background-color: #E34444;
+    color: white;
+}
+
+#preview {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(141, 141, 141, 0.43);
+}
+
+#post {
+    background-color: white;
+}
+
+#owner {
+    font-size: 12px;
+}
+
+.buttons {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
+}
+
+@media only screen and (min-width: 800px) {
+    #wrapper {
+        grid-column: 3 / 19;
+        display: grid;
+        grid-template-columns: repeat(16, 1fr);
+    }
+
+    h1 {
+        grid-column: 1 / 17;
+    }
+
+    .tab {
+        grid-column: 1 / 7;
+    }
+
+    .create {
+        grid-column: 7 / 8;
+    }
+
+    .search {
+        grid-column: 11 / 17;
+    }
+
+    .create input{
+        width: 60%;
+    }
+
+    #itemArea {
+        grid-column: 1 / 17;
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        height: 450px;
+        overflow-y: scroll;
+        scrollbar-width: none;
+        gap: 1%;
+    }
+
+    .item {
+        display: flex;
+        width: 24%;
+        height: 50%;
+        background-color: white;
+        border: 1px solid black;
+        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+
+    .item img {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        scale: 1 / 1;
+        object-fit:contain;
+        object-position: center;
+    }
+
+    #confirmDelete form {
+        background-color: #F4F4F4;
+        margin: 10% 40% 0 40%;
+        box-sizing: border-box;
+        border-radius: 20px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    #post {
+        height: 450px;
+        margin: 10% 20% 10% 20%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #post p {
+        margin: 1%;
+    }
+
+    #post #image {
+        display: flex;
+        background-color: black;
+        height: 100%;
+        grid-column: 1 / 2;
+        grid-row: span 10;
+        justify-content: center;
+        align-items:center;
+    }
+
+    #post img {
+        width: auto;
+        height: auto;
+        max-width: 400px;
+        max-height: 450px;
+        scale: 1 / 1;
+        object-fit: contain;
+        object-position: center;
+    }
+
+    #title, #owner, #caption {
+        grid-column: 2 / 3;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    body {
+        grid-template-columns: 1fr;
+    }
+
+    #wrapper {
+        margin: 0 5% 0 5%;
+    }
+
+    .create input[type=submit] {
+        width: 30px;
+        margin: 5px 0 0 0;
+        text-align: center;
+        padding: 0;
+    }
+
+    .item {
+        display: flex;
+        width: 100%;
+        background-color: white;
+        border: 1px solid black;
+        border-radius: 10px;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        margin-top: 10px;
+    }
+
+    .item img {
+        width: auto;
+        height: auto;
+        max-width: 100%;
+        max-height: 100%;
+        scale: 1 / 1;
+        object-fit:contain;
+        object-position: center;
+        border-radius: 10px;
+    }
+
+    #post {
+        height: 600px;
+        margin: 5% 20% 10% 20%;
+    }
+
+    #post p {
+        margin: 1%;
+    }
+
+    #post #image {
+        display: flex;
+        background-color: black;
+        justify-content: center;
+        align-items:center;
+    }
+
+    #post img {
+        width: auto;
+        height: auto;
+        max-width: 60%;
+        max-height: 450px;
+        scale: 1 / 1;
+        object-fit: contain;
+        object-position: center;
+    }
+}
