@@ -1,0 +1,100 @@
+/*
+This file contains the styling for award points tab in the quest management.
+The styling focuses on the layout.
+*/
+
+#award {
+    background-color: #F3F3F3;
+    padding: 20px 0 20px 0;
+    margin-top: 10px;
+    border-radius: 10px;
+}
+
+#pointsInput {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#pointsInput p {
+    font-weight: normal;
+    font-size: 15px;
+    margin: 0 10px 0 10px;
+}
+
+input[type=number] {
+    text-align: center;
+    padding: 0;
+}
+
+input[type=reset] {
+    background-color: black;
+    color: white;
+    padding: 0 3% 0 3%;
+}
+
+input[type=submit] {
+    background-color: #00308F;
+    color: white;
+    padding: 0 3% 0 3%;
+}
+
+select {
+    padding-left: 35px;
+    background: url('/RWDD/css/icon/leaf.png') no-repeat;
+    background-size: 18px 15px;
+    background-position: 5px center;
+    background-color: white;
+}
+
+#pointsInput input[type=number] {
+    width: 20%;
+}
+
+#note {
+    margin: 0;
+}
+
+@media only screen and (min-width: 700px) {
+    #award {
+        display: grid;
+        grid-column: 1 / 17;
+        grid-template-columns: repeat(16, 1fr);
+    }
+
+    .selection {
+        grid-column: 2 / 8;
+    }
+
+    .user {
+        grid-column: 2 / 8;
+    }
+
+    #points {
+        grid-column: 9 / 16;
+    }
+
+    #note {
+        grid-column: 9 / 16;
+    }
+
+    #buttons {
+        display: flex;
+        grid-column: 1 / 16;
+        justify-content: right;
+        gap: 1%;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    #award {
+        padding: 3%;
+    }
+
+    #buttons {
+        display: flex;
+        width: 100%;
+        justify-content: right;
+        gap: 10px;
+    }
+}

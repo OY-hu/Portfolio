@@ -1,0 +1,232 @@
+/*
+This file contains the CSS for files in the quest folder.
+The style focuses on the layout.
+*/
+
+.quest {
+    background-color: white;
+    border-radius: 10px;
+    height: 350px;
+}
+
+.questBanner {
+    display: inline-block;
+    width: 100%;
+    height: 70px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+.bannerPicture .picture {
+    width: 100%;
+    height: 70px;
+    background-color: #93B397;
+    border-radius: 10px 10px 0 0 ;
+    object-fit: contain;
+}
+
+.badge {
+    position: absolute;
+    left: 20px;
+    bottom: -20px;
+    border-radius: 50%;
+    background-color:#D9D9D9;
+}
+
+h4 {
+    margin: 0 5% 0 5%;
+}
+
+p {
+    font-size: 12px;
+    margin: 5px 5% 5px 5%;
+}
+
+.questPoints {
+    margin: 0 5% 5px 5%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.questPoints img {
+    width: 22px;
+    height: 22px;
+}
+
+.questPoints input[type=submit] {
+    margin: 0;
+    background-color: black;
+    color: white;
+    width: 30%;
+    border-radius: 15px;
+}
+
+.questPoints input[type=button] {
+    margin: 0;
+    background-color: #E34444;
+    color: white;
+    width: 30%;
+    border-radius: 15px;
+}
+
+#confirmDelete {
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color:rgba(141, 141, 141, 0.43)
+}
+
+#confirmDelete.open {
+    display: block;
+}
+
+#cancelButton {
+    background-color: black;
+    color: white;
+}
+
+#confirmButton {
+    background-color: #E34444;
+    color: white;
+}
+
+#viewQuest {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(141, 141, 141, 0.43);
+}
+
+.quest p {
+    height: 160px;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+#details {
+    background-color: white;
+    border-radius: 10px;
+}
+
+#details .questPoints {
+    justify-content:left;
+}
+
+#details p {
+    height: 220px;
+}
+
+#points {
+    margin-right: 4%;
+}
+
+
+@media only screen and (min-width: 800px) {
+    h1 {
+        grid-column: 1 / 21;
+    }
+
+    #wrapper {
+        display: grid;
+        grid-column: 3 / 19;
+        grid-template-columns: repeat(16, 1fr);
+    }
+
+    #wrapper .tab {
+        grid-column: 1 / 7;
+    }
+
+    #manage {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        height: 470px;
+        overflow-y: scroll;
+        grid-column: 1 / 17;
+    }
+
+    .quest {
+        width: 23%;
+        margin: 1%;
+    }
+
+    .create {
+        grid-column: 7 / 8;
+    }
+
+    .create input[type=submit] {
+        width: 60%;
+    }
+
+    .search {
+        grid-column: 11 / 17;
+    }
+
+    .create {
+        grid-column: 7 / 8;
+    }
+
+    #confirmDelete form {
+        background-color: #F4F4F4;
+        margin: 10% 40% 0 40%;
+        box-sizing: border-box;
+        border-radius: 20px;
+        padding: 10px;
+        text-align: center;
+    }
+
+    #details {
+        margin: 10% 20% 10% 20%;
+        height: 400px;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    body {
+        grid-template-columns: 1fr;
+    }
+
+    #wrapper {
+        margin: 0 5% 0 5%;
+    }
+
+    .quest {
+        margin: 10px 0 10px 0;
+    }
+
+    .questPoints {
+        justify-content: left;
+    }
+
+    .questPoints input[type=submit] {
+        margin-left: 30%;
+    }
+
+    .questPoints input[type=button] {
+        margin-left: 1%;
+    }
+
+    .create input[type=submit] {
+        width: 30px;
+        margin: 5px 0 0 0;
+        text-align: center;
+        padding: 0;
+    }
+
+    #details {
+        margin: 10% 10% 10% 10%;
+        height: fit-content;
+        padding-bottom: 10px;
+    }
+
+    #confirmDelete form {
+        background-color: #F4F4F4;
+        margin: 10% 10% 0 10%;
+        box-sizing: border-box;
+        border-radius: 20px;
+        padding: 10px;
+        text-align: center;
+    }
+}

@@ -1,0 +1,122 @@
+/*
+This file contains the CSS used by questForm.php file only.
+The styling focuses on the layout.
+*/
+
+#wrapper {
+    background-color: #F3F3F3;
+    border-radius: 10px;
+}
+
+#pointsInput {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#pointsInput p {
+    font-weight: normal;
+    font-size: 15px;
+    margin: 0 10px 0 10px;
+}
+
+#points {
+    padding: 0;
+}
+
+input[type=number] {
+    padding: 5px;
+    text-align: center;
+}
+
+#questBanner {
+    display: inline-block;
+    width: 100%;
+    height: 90px;
+    position: relative;
+    margin-bottom: 30px;
+}
+
+#bannerPicture #picture {
+    width: 100%;
+    height: 90px;
+    background-color: #93B397;
+    border-radius: 10px 10px 0 0 ;
+    object-fit: contain;
+}
+
+#pictureInput {
+    position: absolute;
+    left: 40px;
+    bottom: -20px;
+    border-radius: 50%;
+    background-color:#D9D9D9;
+}
+
+input[type=file] {
+    display: none;
+}
+
+input[type=submit] {
+    width: 40%;
+    background-color: black;
+    color: white;
+}
+
+input[type=button] {
+    width: 40%;
+    background-color: #E34444;
+    color: white;
+}
+
+textarea {
+    height: 100px;
+}
+
+@media only screen and (min-width: 700px) {
+    h1 {
+        grid-column: 5 / 17;
+    }
+
+    #wrapper {
+        display: grid;
+        grid-column: 5 / 17;
+        grid-template-columns: repeat(12, 1fr);
+    }
+
+    #banner {
+        grid-column: 1 / 13;
+    }
+
+    .text, #points {
+        grid-column: 2 / 12;
+    }
+
+    #pointsInput input[type=number] {
+        width: 10%;
+    }
+
+    #buttons {
+        grid-column: 8 / 12;
+        text-align: right;
+    }
+}
+
+@media only screen and (max-width: 700px) {
+    body {
+        grid-template-columns: 1fr;
+        margin: 0 5% 0 5%;
+    }
+
+    .text, #points, #buttons {
+        margin: 0 5% 0 5%;
+    }
+
+    #buttons {
+        text-align: right;
+    }
+
+    #pointsInput input[type=number] {
+        width: 20%;
+    }
+}
