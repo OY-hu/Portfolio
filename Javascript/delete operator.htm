@@ -1,0 +1,39 @@
+<!Doctype HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<html>
+
+<head>
+    <title>The Delete Operator</title>
+    <script type="text/javascript">
+
+        var star = {};
+
+        star["Polaris"] = new Object;
+        star["Mizar"] = new Object;
+        star["Aldebaran"] = new Object;
+        star["Rigel"] = new Object;
+
+        star["Polaris"].constellation = "Ursa Minor";
+        star["Mizar"].constellation = "Ursa Major";
+        star["Aldebaran"].constellation = "Taurus";
+        star["Rigel"].constellation = "Orion";
+
+    </script>
+</head>
+
+<body id="mainbody">
+    <script type="text/javascript">
+        
+        delete (star["Polaris"].constellation);
+        
+        for (starName in star) {
+            var para = document.createElement('p');
+            para.id = starName;
+            para.appendChild(document.createTextNode(starName + ": " + star[starName].constellation));
+            document.getElementsByTagName("body")[0].appendChild(para);
+        }
+    
+    </script>
+
+</body>
+</html>
