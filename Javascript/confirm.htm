@@ -1,0 +1,23 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title>Confirming Something</title>
+
+        <script type="text/javascript">
+            function processConfirm(answer){
+                var result;
+                (answer) ? result = "Excellent. We'll play a nice game of chess." : result = "Maybe later then.";
+                return result;
+            }
+
+        </script>
+    </head>
+    <body>
+        <script type="text/javascript">
+
+            var confirmAnswer = confirm("Shall we play a game?");
+            var theAnswer = processConfirm(confirmAnswer);
+            alert(theAnswer);
+        </script>
+    </body>
+</html>
