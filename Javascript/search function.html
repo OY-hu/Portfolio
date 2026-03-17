@@ -1,0 +1,27 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+
+<head>
+    <title>Example Search Function</title>
+    <script type="text/javascript">
+        var stars = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        var constells = ["Ursa Minor", "Taurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+
+        function searchStars(star){
+            for (var i = 0; i<stars.length; i++){
+                for (var i = 0; i<stars.length; i++){
+                    if (stars[i] == star){
+                        return constells[i];
+                    }
+                }
+            }
+            return star + " Not Found.";
+        }
+    </script>
+</head>
+<body>
+    <script type="text/javascript">
+        var inputStar = prompt("Enter star name: ");
+        alert(searchStars(inputStar));
+    </script>
+    <p>Stars</p>
+</body>
