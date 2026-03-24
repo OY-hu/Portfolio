@@ -1,0 +1,41 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title>Example Location, Location, Location</title>
+        <script type="text/javascript">
+            function showProps() {
+                var body = document.getElementsByTagName("body")[0];
+                for (var prop in location) {
+                    var elem = document.createElement("p");
+                    var text = document.createTextNode(prop + ": " + location[prop]);
+                    elem.appendChild(text);
+                    body.appendChild(elem);
+                }
+                if (location.search) {
+                    var querystring = location.search.substring(1);
+                    var splits = querystring.split('&');
+                    for (var i = 0; i < splits.length; i++) {
+                        var splitpair = splits[i].split('=');
+                        var elem = document.createElement("p");
+                        var text = document.createTextNode(splitpair[0] + ": " + splitpair[1]);
+                        if (splitpair[0] == "country") {
+                            switch (unescape(splitpair[1])) {
+                                case "Brazil":
+                                    alert("Obrigado");
+                                    break;
+                                case "Great Britain":
+                                    alert("Thank You");
+                                    break;
+                            }
+                        }
+                        elem.appendChild(text);
+                        body.appendChild(elem);
+                    }
+                }
+            }
+        </script>
+    </head>
+    <body onload="showProps()">
+        <p>Example</p>
+    </body>
+</html>
