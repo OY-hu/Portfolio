@@ -1,0 +1,18 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title>Example Get By Id</title>
+        <script type="text/javascript">
+            function changetext() {
+                var p1 = document.getElementById("sometext");
+                alert(p1.innerHTML);
+                p1.innerHTML = "Changed Text";
+            }
+        </script>
+    </head>
+    <body onload="changetext()">
+        <p id="sometext">Here's some text.</p>
+        <p id = "moretext">Here's some text.</p>
+        <p id="linkp">Link to the <a id="w3link" href="http://www.w3.org">W3</a></p>
+    </body>
+</html>
