@@ -1,0 +1,28 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title>Example Tag Name</title>
+        <script type="text/javascript">
+            function changecolors() {
+                var a1 = document.getElementsByTagName("td");
+                for (var i = 0; i<a1.length; i++){
+                    a1[i].style.background = "#aaabba";
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <table id = "mytable" border="1">
+            <tr>
+                <td id="lefttd0">Left column</td><td id="righttd0">Right column</td>
+            </tr>
+            <tr>
+                <td id="lefttd1">Left column</td><td id="righttd1">Right column</td>
+            </tr>
+            <tr>
+                <td id="lefttd2">Left column</td><td id="righttd2">Right column</td>
+            </tr>
+        </table>
+        <a href="#" onclick="return changecolors();">Click to Change Colors</a>
+    </body>
+</html>
