@@ -1,0 +1,74 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+
+<head>
+    <title>Exmaple Pizza</title>
+    <script type="text/javascript">
+        function prepza() {
+            var checkboxes = document.forms["pizzaform"].toppingcheck.length;
+            var newelement = document.createElement("p");
+            newelement.setAttribute("id", "orderheading");
+            document.body.appendChild(newelement);
+            newelement.appendChild(document.createTextNode("This pizza will have:"))
+
+            for (var i = 0; i < checkboxes; i++) {
+                if (document.forms["pizzaform"].toppingcheck[i].checked) {
+                    var newelement = document.createElement("p");
+                    newelement.setAttribute("id", "newelement" + i);
+                    document.body.appendChild(newelement);
+                    newelement.appendChild(document.createTextNode(document.forms["pizzaform"].toppingcheck[i].value));
+                }
+            }
+
+            var crusttype = document.forms["pizzaform"].crust;
+            var crustlength = crusttype.length;
+            for (var c = 0; c < crustlength; c++) {
+                if (crusttype[c].checked) {
+                    var newelement = document.createElement("p");
+                    newelement.setAttribute("id", "crustelement" + i);
+                    document.body.appendChild(newelement);
+                    newelement.appendChild(document.createTextNode(crusttype[c].value + " Crust"));
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form id="pizzaform" action="#" onsubmit="return false;">
+        <table>
+            <tr>
+                <td>Toppings</td>
+                <td>Crust</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="topping1" value="Sausage" name="toppingcheck" />Sausage<br /></td>
+                <td><input type="radio" id="radio1" value="Regular" name="crust" />Ragular<br /></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="topping2" value="Pepperoni" name="toppingcheck" />Pepperoni<br /></td>
+                <td><input type="radio" id="radio2" value="Deep Dish" name="crust" />Deep Dish<br /></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="topping3" value="Ham" name="toppingcheck" />Ham<br /></td>
+                <td><input type="radio" id="radio3" value="Thin" name="crust" />Thin<br /></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="topping4" value="Green Peppers" name="toppingcheck" />Green Peppers<br />
+                </td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="topping5" value="Mushrooms" name="toppingcheck" />Mushrooms<br /></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="topping6" value="Onions" name="toppingcheck" />Onions<br /></td>
+            </tr>
+            <tr>
+                <td><input type="checkbox" id="topping7" value="Pineapple" name="toppingcheck" />Pineapple<br /></td>
+            </tr>
+        </table>
+        <p><input type="submit" id="formsubmit" name="formsubmit" value="Prep Pizza" onclick="prepza();" /></p>
+    </form>
+</body>
+
+</html>
