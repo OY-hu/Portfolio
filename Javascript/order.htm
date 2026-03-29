@@ -1,0 +1,31 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title>Catalog Example</title>
+        <script type="text/javascript">
+            function formValid() {
+                if (document.forms["catalogform"]["quantity"].value > 3 ) {
+                    var submitbtn = document.forms["catalogform"]["submitbutton"];
+                    var quantityp = document.getElementById("quantityp") ; 
+                    var errorel = document.createElement("span") ;
+                    errorel.appendChild(document.createTextNode(" Limit 3 per household")) ;
+                    quantityp.appendChild(errorel) ; 
+                    return false;
+                } else {
+                    return true;
+                }
+            }
+            document.forms["catalogform"].onsubmit = formValid();
+        </script>
+    </head>
+    <body>
+        <form name="catalogform" onsubmit="return formValid();" id="catalogform" action="catalog.php" method="POST">
+            <p>Order Blades of Grass From Steve Suehring's Lawn</p>
+            <div id="lawndiv"><img alt="steve suehring's lawn is dead" src="lawn.jpg" id="lawnpic"><br/></div>
+            <p>Description: Steve is terrible at lawn care, thereforethere's not much grass on his lawn. Quantities are extremely limited.</p>
+            <p>Price: $100.00 per blade</p>
+            <p id="quantityp" >Quantity to order (limit 3 per Household): <input type="text" name="quantity"></p>
+            <p id="submitp"><input id="submitbutton" type="submit" value="Place Order"></p>
+        </form>
+    </body>
+</html>
