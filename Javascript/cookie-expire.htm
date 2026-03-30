@@ -1,0 +1,18 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title>Example Hello Cookie</title>
+        <script text="text/javascript">
+            var cookName = "testcookie";
+            var cookVal = "testvalue";
+            var date = new Date();
+            date.setTime(date.getTime() + 604800000)
+            var expireDate = date.toGMTString();
+            var myCookie = cookName + "=" + cookVal + ";expires=" + expireDate;
+            document.cookie = myCookie;
+        </script>
+    </head>
+    <body>
+        <p>Hello</p>
+    </body>
+</html>
