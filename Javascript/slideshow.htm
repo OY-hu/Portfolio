@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+
+        <title>Example Slideshow</title>
+        <script text="type/javascript">
+            var images= ["home_default.png", 'about_default.png', 'blog_default.png', 'logo.png'];
+            function nextimage() {
+                var img = document.getElementById("slideimage");
+                var imgname = img.name.split("_");
+                var index= imgname[1];
+                if (index == images.length - 1) {
+                    index = 0;
+                } else {
+                    index ++;
+                }
+                img.src = images[index];
+                img.name = "image_" + index;
+            }
+
+            function previmage() {
+                var img = document.getElementById("slideimage");
+                var imgname = img.name.split("_");
+                var index = imgname[1];
+                if (index == 0) {
+                    index = images.length -1;
+                } else {
+                    index --
+                }
+                img.src = images[index];
+                img.name = "image_" + index;
+            }
+        </script>
+    </head>
+    <body>
+        <p><img id="slideimage" name="image_0" src="home_default.png" alt="Home"></p>
+        <form name="slideform">
+            <input type="button" id="prevbtn" value="Previous" onclick="previmage()">
+            <input type="button" id="nextbtn" value="Next" onclick="nextimage()">
+        </form>
+    </body>
+</html>
