@@ -1,0 +1,42 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title>Example Rollover</title>
+        <script type="text/javascript">
+
+            function moveOver(imgObj) {
+                if (typeof window.addEventListener != "undefined") {
+                    imgObj.addEventListener("mouseover", function() {imgObj.src = imgObj.id + "_over.png";}, false);
+                    imgObj.addEventListener("mouseout", function() {imgObj.src = imgObj.id + "_default.png";}, false);
+                } else {
+                    imgObj.attachEvent("onmouseover", function() {imgObj.src = imgObj.id + "_over.png";});
+                    imgObj.attachEvent("onmouseout", function() {imgObj.src = imgObj.id + "_default.png";});
+                }
+            }
+
+            function rollover () {
+                var images = document.getElementsByTagName("img");
+                var roll = new RegExp ("rollover");
+                var preload = [];
+                for (var i = 0; i<images.length; i++) {
+                    if (images[i].id.match(roll)) {
+                        preload[i] = new Image();
+                        preload[i].src = images[i].id + "_over.png";
+                        moveOver(images[i]);
+                    }
+                }
+            }
+            if (typeof window.addEventListener != "undefined") {
+                window.addEventListener("load", rollover, false);
+            } else {
+                window.attachEvent("onload", rollover)
+            }
+        </script>
+    </head>
+    <body>
+        <p><img id="rollover_home" name="img_home" src="rollover_home_default.png" alt="Home"></p>
+        <p><img id="rollover_about" name="img_about" src="rollover_about_default.png" alt="About"></p>
+        <p><img id="rollover_blog" name="img_blog" src="rollover_blog_default.png" alt="Blog"></p>
+        <p><img id="logo" name="img_logo" src="logo.png" alt="Logo"></p>
+    </body>
+</html>
