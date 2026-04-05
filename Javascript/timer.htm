@@ -1,0 +1,17 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title>Example Timer</title>
+        <script type="text/javascript">
+            function sendAlert() {
+                alert("Hello");
+            }
+            function startTimer() {
+                var timerID = window.setTimeout(sendAlert, 8000);
+            }
+        </script>
+    </head>
+    <body onload="startTimer();">
+        <p>Hello</p>
+    </body>
+</html>
