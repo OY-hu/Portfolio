@@ -1,0 +1,19 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title>Example Form Validation</title>
+        <script type="text/javascript" src="form.js"></script>
+    </head>
+    <body>
+        <form name="formexample" id="formexample" action="#">
+            <div id="citydiv">City: <input id="city" name="city"></div>
+            <div><input id="submit" type="submit"></div>
+        </form>
+        <script type="text/javascript">
+            function init() {
+                document.forms[0].onsubmit = function() {return checkValid(this)};
+            }
+            window.onload = init;
+        </script>
+    </body>
+</html>
