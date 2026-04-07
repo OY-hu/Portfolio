@@ -1,0 +1,21 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+    <head>
+        <title>Javascript Step by Step</title>
+        <style type="text/css">
+            h1 {font-family: arial;}
+            #tagline {font-weight: bold;}
+        </style>
+    </head>
+    <body>
+        <h1 id="heading">Javascript Step by Step</h1>
+        <p id="tagline">Javascript Step by Step is a book by Steve Suehring, published by Microsoft Press.</p>
+        <p>The book emphasizes standards-based Javascript that works on multiple platforms through different browsers.</p>
+        <script type="text/javascript">
+            var pElements = document.getElementsByTagName("p");
+            for (var i = 0; i<pElements.length; i++) {
+                pElements[i].style.fontFamily = "arial"; 
+            }
+        </script>
+    </body>
+</html>
